@@ -21,4 +21,19 @@ describe('testing CommentBox component', function(){
         expect(component).to.have.class('comment-box')
     })
 
+    describe('textbox functions', () => {
+        
+        beforeEach(() => {
+            component.find('textarea').simulate('change', 'new comment')
+        })
+
+        it('shows text that is entered', () => {
+            expect(component.find('textarea')).to.have.value('new comment')
+        })
+        it('when submitted text clears', () => {
+            
+        })
+    })
+
+
 })
