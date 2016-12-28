@@ -31,7 +31,8 @@ describe('testing CommentBox component', function(){
             expect(component.find('textarea')).to.have.value('new comment')
         })
         it('when submitted text clears', () => {
-            
+            component.simulate('submit')
+            expect(component.find('textarea')).to.have.value('')
         })
     })
 
